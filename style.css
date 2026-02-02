@@ -1,0 +1,423 @@
+.main-header {
+    display: flex; /* Öğeleri yan yana dizer */
+    justify-content: space-between; /* Logo sola, menü sağa */
+    align-items: center; /* Dikeyde tam ortalar */
+    padding: 20px 5%; /* Yanlardan boşluk bırakır */
+    background-color: #fff; /* Üst menü beyaz olsun */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Çok hafif bir gölge */
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #5d5045; /* Marka rengin olan o koyu kahve/mürekkep tonu */
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none; /* Noktaları kaldırır */
+    display: flex;
+    gap: 30px; /* Hakkımızda ve ikonlar arası boşluk */
+}
+
+.nav-list a {
+    text-decoration: none; /* Linkin altındaki çizgiyi kaldırır */
+    color: #5d5045;
+    font-weight: 500;
+}
+.hero {
+    height: 70vh; /* Ekranın %70'ini kaplar */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('coffee.png');
+    background-size: cover; /* Görseli tam sığdırır */
+    background-position: center; /* Ortalar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #8b735b; /* Buton rengi */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px; /* Yuvarlak buton */
+    text-decoration: none;
+    transition: 0.3s; /* Geçiş efekti */
+}
+
+.hero-btn:hover {
+    background-color: #5d5045; /* Üzerine gelince renk değişimi */
+}.manifesto-text {
+    /* Senin için seçtiğim özel font */
+    font-family: 'Playfair Display', serif; 
+    
+    /* Yazı tipi ayarları */
+    font-style: italic; /* İtalik duruş */
+    font-weight: 400; /* Çok kalın olmayan, zarif bir yapı */
+    font-size: 1.85rem; /* Okunaklı ama vurgulu bir büyüklük */
+    line-height: 1.7; /* Satır aralığını ferahlattık */
+    
+    /* Renk ve Hizalama */
+    color: #5d5045; /* Marka kahverengini kullandık */
+    text-align: center;
+    
+    /* Konumlandırma */
+    max-width: 850px; /* Yazının bir blok halinde derli toplu durması için */
+    margin: 80px auto; /* Üstten ve alttan geniş, ferah bir boşluk */
+    padding: 0 25px;
+    
+    /* Çok hafif bir gölge ile kağıt üzerinde duruyormuş hissi */
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.05);
+}
+
+/* Hizmetler Bölümü Genel Alanı */
+.services-section {
+    padding: 100px 5%;
+    background-color: #fdfaf6; /* Sitenin yumuşak bej zemini */
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #5d5045; /* Marka koyu kahven */
+    margin-bottom: 50px;
+}
+
+/* 6 Kartın Dizilimi (Grid) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kartları otomatik sığdırır */
+    gap: 30px; /* Kartlar arası boşluk */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bireysel Hizmet Kartı Tasarımı */
+.service-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Çok hafif, modern bir gölge */
+    transition: all 0.4s ease; /* Hareketin yumuşak olması için */
+    border: 1px solid #f1ece6;
+}
+
+/* Kartın Üzerine Gelince Oluşan Efekt */
+.service-card:hover {
+    transform: translateY(-10px); /* Kart yukarı doğru 10px kayar */
+    box-shadow: 0 15px 40px rgba(93, 80, 69, 0.1); /* Gölge biraz daha belirginleşir */
+    border-color: #8b735b; /* Kenarlık senin buton rengine döner */
+}
+
+/* İkon ve Başlıklar */
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #5d5045;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #7a6d62;
+    line-height: 1.6;
+}
+
+/* Dijital Tohumlar Bölümü */
+.products-section {
+    padding: 100px 5%;
+    background-color: #f9f6f2; /* Hizmetlerden biraz daha farklı, sıcak bir ton */
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #8b735b;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+/* Ürün Grid Yapısı */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Kitap Kartı Tasarımı */
+.product-card {
+    background: transparent;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+/* Kitap Sırtı ve Kapak Efekti (Placeholder) */
+.book-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #e0d7cd 0%, #c5b9ac 100%);
+    border-radius: 5px 15px 15px 5px; /* Kitap formu verir */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fdfaf6;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    border-left: 8px solid #8b735b; /* Kitap cildi etkisi */
+}
+
+/* "Coming Soon" Yazısı Üzerindeki Işıltı */
+.book-placeholder::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+
+.product-card:hover .book-placeholder::after {
+    transform: translateX(100%);
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Üzerine gelince kitap hafifçe büyür */
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #5d5045;
+    margin-top: 20px;
+}
+
+/* Çalışma Süreci Genel Alanı */
+.process-section {
+    padding: 100px 5%;
+    background-color: #fdfaf6;
+    text-align: center;
+}
+
+/* Adımları yan yana dizen kapsayıcı */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    gap: 20px;
+    position: relative;
+}
+
+/* Her bir adım kartı */
+.step-card {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+}
+
+/* Adım Numaraları (O şık daireler) */
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #8b735b; /* Marka rengin */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(139, 115, 91, 0.3);
+}
+
+.step-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #5d5045;
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: #7a6d62;
+    line-height: 1.5;
+}
+
+/* Masaüstünde adımlar arasına ok eklemek için (Opsiyonel ama şık) */
+@media (min-width: 768px) {
+    .step-card:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        top: 45px;
+        right: -15px;
+        font-size: 1.5rem;
+        color: #d1c7bc;
+    }
+}
+
+/* Mobil cihazlar için alt alta dizilim */
+@media (max-width: 767px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* Neden T Editörlük Genel Alanı */
+.why-us-section {
+    padding: 80px 5%;
+    background-color: #fdfaf6; /* Sitenin imza bej tonu */
+    text-align: center;
+}
+
+/* 3 Ana Değerin Dizilimi */
+.why-us-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Her Bir Madde Kutusu */
+.why-us-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #f1ece6;
+    transition: all 0.3s ease;
+}
+
+/* Hafif Bir Parlama Efekti */
+.why-us-item:hover {
+    border-color: #8b735b;
+    box-shadow: 0 10px 25px rgba(139, 115, 91, 0.08);
+}
+
+/* İkon Tasarımı */
+.why-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.why-us-item h4 {
+    font-family: 'Playfair Display', serif; /* Senin seçtiğin o şık font */
+    font-size: 1.6rem;
+    color: #5d5045; /* Marka koyu kahven */
+    margin-bottom: 15px;
+}
+
+.why-us-item p {
+    font-size: 1rem;
+    color: #7a6d62;
+    line-height: 1.6;
+}
+
+
+/* Alt Bilgi (Footer) Alanı */
+.main-footer {
+    padding: 60px 5% 30px 5%;
+    background-color: #ffffff; /* Temiz beyaz zemin */
+    text-align: center;
+    border-top: 1px solid #f1ece6; /* Üst kısımdan ayıran ince zarif hat */
+}
+
+.footer-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #5d5045; /* Marka koyu kahven */
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #7a6d62;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+/* Alt Bilgi (Footer) Alanı */
+.main-footer {
+    padding: 60px 5% 30px 5%;
+    background-color: #ffffff; /* Temiz beyaz zemin */
+    text-align: center;
+    border-top: 1px solid #f1ece6; /* Üst kısımdan ayıran ince zarif hat */
+}
+
+.footer-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #5d5045; /* Marka koyu kahven */
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #7a6d62;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Instagram Butonu Tasarımı */
+.instagram-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8b735b; /* Marka açık kahven */
+    color: #ffffff !important;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* SVG Logo Ayarı */
+.insta-icon-svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.instagram-follow-btn:hover {
+    background-color: #5d5045;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(93, 80, 69, 0.2);
+}
+
+/* En Alttaki Telif Hakkı Yazısı */
+.footer-bottom {
+    border-top: 1px solid #f9f6f2;
+    padding-top: 25px;
+    font-size: 0.9rem;
+    color: #b5aaa0;
+    letter-spacing: 0.5px;
+}
